@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaTech - Materiales de Construcción</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-icon">NT</span>
+      <span class="logo-text">NovaTech</span>
+    </div>
+    <nav class="nav">
+      <a href="#inicio" data-scroll>Inicio</a>
+      <a href="#productos" data-scroll>Productos</a>
+      <a href="#contacto" data-scroll>Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <div class="cart-icon" id="cartBtn">
+        🛒<span class="cart-badge" id="cartBadge">0</span>
+      </div>
+      <div class="user-icon" id="userBtn">👤</div>
+      <button class="btn btn-primary" id="loginBtn">Iniciar Sesión</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-text">
+      <h1>Materiales de Construcción de Primera Calidad</h1>
+      <p>Más de 20 años distribuyendo los mejores materiales para tu proyecto</p>
+      <div class="hero-buttons">
+        <button class="btn btn-light" id="verCatalogoBtn">Ver Catálogo →</button>
+        <button class="btn btn-outline" id="registrarseBtn">Registrarse</button>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-icon">📦</div>
+      <h3>+5000 Productos</h3>
+      <p>En stock y listos para entregar</p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="feature">
+      <div class="feature-icon">🚚</div>
+      <h4>Envío Rápido</h4>
+      <p>Entregas en 24-48 horas en zona urbana</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🛡️</div>
+      <h4>Garantía de Calidad</h4>
+      <p>Todos nuestros productos están certificados</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🕒</div>
+      <h4>Atención 24/7</h4>
+      <p>Soporte al cliente las 24 horas del día</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🏆</div>
+      <h4>Mejores Precios</h4>
+      <p>Precios competitivos y ofertas especiales</p>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS DESTACADOS -->
+  <section class="products" id="productos">
+    <div class="products-header">
+      <h2>Productos Destacados</h2>
+      <a href="#" class="ver-todos" id="verTodosBtn">Ver todos →</a>
+    </div>
+    <div class="products-grid">
+      <div class="product-card" data-name="Cemento Portland Tipo I" data-price="45.99">
+        <div class="product-image" style="background-image: url('https://cdn.prod.website-files.com/6446db29f5a77d0c2b9bb54d/668c5dc0bdcdd7686bb846ff__portland_cement_type_I-II_94_front.png');"></div>
+        <div class="product-info">
+          <h4>Cemento Portland Tipo I</h4>
+          <div class="product-bottom">
+            <span class="price">$45.99</span>
+            <span class="stock">Stock: 150</span>
+          </div>
+          <button class="btn btn-add-cart">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="Varilla Corrugada 3/8" data-price="12.5">
+        <div class="product-image" style="background-image: url('https://lirp.cdn-website.com/c0317952/dms3rep/multi/opt/20014-81e671f7-1920w.jpg');"></div>
+        <div class="product-info">
+          <h4>Varilla Corrugada 3/8</h4>
+          <div class="product-bottom">
+            <span class="price">$12.5</span>
+            <span class="stock">Stock: 230</span>
+          </div>
+          <button class="btn btn-add-cart">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="Ladrillo Rojo 6x12x24" data-price="0.85">
+        <div class="product-image" style="background-image: url('https://camilorojas.com.co/wp-content/uploads/2024/05/Ladrillo-portante-306x12-terracota-.webp');"></div>
+        <div class="product-info">
+          <h4>Ladrillo Rojo 6x12x24</h4>
+          <div class="product-bottom">
+            <span class="price">$0.85</span>
+            <span class="stock">Stock: 5000</span>
+          </div>
+          <button class="btn btn-add-cart">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="Arena Lavada m³" data-price="28">
+        <div class="product-image" style="background-image: url('https://aridsgarcia.com/wp-content/uploads/2021/04/sorra-rentada-0.2.jpg');"></div>
+        <div class="product-info">
+          <h4>Arena Lavada m³</h4>
+          <div class="product-bottom">
+            <span class="price">$28</span>
+            <span class="stock">Stock: 80</span>
+          </div>
+          <button class="btn btn-add-cart">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>¿Listo para comenzar tu proyecto?</h2>
+    <p>Únete a miles de clientes satisfechos</p>
+    <button class="btn btn-light" id="crearCuentaBtn">Crear Cuenta Ahora →</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo">
+          <span class="logo-icon">NT</span>
+          <span class="logo-text">NovaTech</span>
+        </div>
+        <p>Distribuidora líder de materiales de construcción con más de 20 años de experiencia.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <a href="#">Sobre Nosotros</a>
+        <a href="#">Servicios</a>
+        <a href="#">Sucursales</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Ayuda</h4>
+        <a href="#">Preguntas Frecuentes</a>
+        <a href="#">Términos y Condiciones</a>
+        <a href="#">Política de Privacidad</a>
+      </div>
+
+      <div class="footer-col" id="contacto">
+        <h4>Contacto</h4>
+        <a href="mailto:info@novatech.com">📧 Novatechcol@gmail.com</a>
+        <a href="tel:+12345678900">📞 +37 321 994 0737</a>
+        <p>📍 Bogota, Colombia</p>
+      </div>
+    </div>
+    <hr>
+    <p class="footer-bottom">© 2026 NovaTech. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- MODAL: LOGIN -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal">
+      <button class="modal-close" data-close>&times;</button>
+      <h3>Iniciar Sesión</h3>
+      <form id="loginForm">
+        <label>Correo electrónico</label>
+        <input type="email" placeholder="tucorreo@ejemplo.com" required>
+        <label>Contraseña</label>
+        <input type="password" placeholder="••••••••" required>
+        <button type="submit" class="btn btn-primary full-width">Entrar</button>
+      </form>
+      <p class="modal-switch">¿No tienes cuenta? <a href="#" id="switchToRegister">Regístrate</a></p>
+    </div>
+  </div>
+
+  <!-- MODAL: REGISTER -->
+  <div class="modal-overlay" id="registerModal">
+    <div class="modal">
+      <button class="modal-close" data-close>&times;</button>
+      <h3>Crear Cuenta</h3>
+      <form id="registerForm">
+        <label>Nombre completo</label>
+        <input type="text" placeholder="Tu nombre" required>
+        <label>Correo electrónico</label>
+        <input type="email" placeholder="tucorreo@ejemplo.com" required>
+        <label>Contraseña</label>
+        <input type="password" placeholder="••••••••" required>
+        <button type="submit" class="btn btn-primary full-width">Registrarme</button>
+      </form>
+      <p class="modal-switch">¿Ya tienes cuenta? <a href="#" id="switchToLogin">Inicia sesión</a></p>
+    </div>
+  </div>
+
+  <!-- MODAL: CART -->
+  <div class="modal-overlay" id="cartModal">
+    <div class="modal">
+      <button class="modal-close" data-close>&times;</button>
+      <h3>Tu Carrito</h3>
+      <ul class="cart-list" id="cartList">
+        <li class="cart-empty">Tu carrito está vacío</li>
+      </ul>
+      <div class="cart-total" id="cartTotal"></div>
+      <button class="btn btn-primary full-width" id="checkoutBtn">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
