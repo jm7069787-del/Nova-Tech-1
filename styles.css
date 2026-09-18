@@ -244,15 +244,13 @@ a {
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
-/* Cada tarjeta trae su propia imagen vía "style" inline (background-image: url(...)).
-   Aquí solo definimos cómo se comporta esa imagen: tamaño, recorte y color de respaldo
-   mientras carga o si el link llegara a fallar. */
 .product-image {
   height: 140px;
-  background-color: #e5e7eb; /* color de respaldo si la imagen no carga */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #e5e7eb;
+}
+
+.product-image.sparks {
+  background: linear-gradient(135deg, #111827, #374151);
 }
 
 .product-info {

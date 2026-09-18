@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crear cuenta</title>
+
+    <link rel="stylesheet" href="piola.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <form id="formulario" action="conexion.php" method="post">
+
+        <div class="caja">
+
+            <h3>Crear cuenta</h3>
+
+            <div class="campo">
+                <label for="Nombre">Nombre completo</label>
+                <input type="text" id="Nombre" name="nombre" placeholder="Ana Gómez">
+            </div>
+
+            <br>
+
+            <div class="campo">
+                <label for="Identificacion">Identificación</label>
+                <input type="text" id="Identificacion" name="identificacion" placeholder="123456789">
+            </div>
+
+            <br>
+
+            <div class="campo">
+                <label for="Correo">Correo electrónico</label>
+                <input type="email" id="Correo" name="correo" placeholder="ana.gomez@example.com">
+            </div>
+
+            <br>
+
+            <div class="campo">
+                <label for="Contrasena">Contraseña</label>
+                <input type="password" id="Contrasena" name="contrasena" placeholder="••••••••">
+            </div>
+
+            <br>
+
+            <div class="campo">
+                <label for="Confirmar">Confirmar contraseña</label>
+                <input type="password" id="Confirmar" name="confirmar" placeholder="••••••••">
+            </div>
+
+            <br>
+
+            <div class="campo">
+                <label for="Estado">Estado</label>
+                <input type="text" id="Estado" name="estado" placeholder="Activo">
+            </div>
+
+            <br>
+
+            <button type="submit">Enviar</button>
+
+        </div>
+
+    </form>
+
+
+    <script>
+
+        // Revisar si PHP envió algún resultado
+
+        const url = new URLSearchParams(window.location.search);
+        const resultado = url.get("resultado");
+
+
+        // Registro exitoso
+
+        if (resultado === "exitoso") {
+
+    Swal.fire({
+        title: "¡Registro exitoso!",
+        text: "Tu cuenta fue creada correctamente.",
+        icon: "success",
+        confirmButtonText: "Aceptar"
+    }).then(() => {
+
+        window.location.href = "index.html";
+
+    });
+
+}
+
+
+        // Campos incompletos
+
+        if (resultado === "incompleto") {
+
+            Swal.fire({
+                title: "Campos incompletos",
+                text: "Por favor, completa todos los campos.",
+                icon: "warning",
+                confirmButtonText: "Aceptar"
+            });
+
+        }
+
+
+        // Contraseñas diferentes
+
+        if (resultado === "contrasenas") {
+
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Las contraseñas no coinciden!",
+                confirmButtonText: "Aceptar"
+            });
+
+        }
+
+
+        // Identificación repetida
+
+        if (resultado === "duplicado") {
+
+            Swal.fire({
+                title: "Identificación existente",
+                text: "Esta identificación ya está registrada.",
+                icon: "warning",
+                confirmButtonText: "Aceptar"
+            });
+
+        }
+
+
+        // Error
+
+        if (resultado === "error") {
+
+            Swal.fire({
+                title: "Error",
+                text: "No se pudo realizar el registro.",
+                icon: "error",
+                confirmButtonText: "Aceptar"
+            });
+
+        }
+
+
+        // Validación antes de enviar
+
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+
+            let nombre = document.getElementById("Nombre").value.trim();
+            let identificacion = document.getElementById("Identificacion").value.trim();
+            let correo = document.getElementById("Correo").value.trim();
+            let contrasena = document.getElementById("Contrasena").value;
+            let confirmar = document.getElementById("Confirmar").value;
+            let estado = document.getElementById("Estado").value.trim();
+
+
+            // Campos vacíos
+
+            if (
+                nombre === "" ||
+                identificacion === "" ||
+                correo === "" ||
+                contrasena === "" ||
+                confirmar === "" ||
+                estado === ""
+            ) {
+
+                event.preventDefault();
+
+                Swal.fire({
+                    title: "Campos incompletos",
+                    text: "Por favor, completa todos los campos.",
+                    icon: "warning",
+                    confirmButtonText: "Aceptar"
+                });
+
+                return;
+            }
+
+
+            // Contraseñas diferentes
+
+            if (contrasena !== confirmar) {
+
+                event.preventDefault();
+
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Las contraseñas no coinciden!",
+                    confirmButtonText: "Aceptar"
+                });
+
+                return;
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
+
